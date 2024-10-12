@@ -9,7 +9,8 @@ const addProduct = () => {
     productQutntaty.value='';
 
     console.log(product,quentaty);
-    displayProduct(product,quentaty)
+    displayProduct(product,quentaty);
+    saveProductLocaleStroge(product,quentaty)
 }
 
 const displayProduct =(product,quentaty) =>{
@@ -30,5 +31,10 @@ const getStrogeShopingCart =() =>{
 
 
 const saveProductLocaleStroge =(product, quentaty) =>{
-
+    const cart =getStrogeShopingCart();
+    cart[product] =quentaty;
+    console.log(cart);
+    const cartStringFild =JSON.stringify(cart);
+    console.log(cartStringFild);
+    localStorage.setItem('cart',cartStringFild)
 }
