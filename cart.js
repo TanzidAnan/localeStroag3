@@ -33,8 +33,19 @@ const getStrogeShopingCart =() =>{
 const saveProductLocaleStroge =(product, quentaty) =>{
     const cart =getStrogeShopingCart();
     cart[product] =quentaty;
-    console.log(cart);
+    // console.log(cart);
     const cartStringFild =JSON.stringify(cart);
-    console.log(cartStringFild);
+    // console.log(cartStringFild);
     localStorage.setItem('cart',cartStringFild)
 }
+
+const displayFromLocalStrog =() =>{
+    const saveCart =getStrogeShopingCart();
+    console.log(saveCart);
+    for(const product in saveCart){
+        const quentaty =saveCart[product]
+        console.log(product,quentaty);
+        displayProduct(product,quentaty)
+    }
+}
+displayFromLocalStrog()
