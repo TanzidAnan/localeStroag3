@@ -16,8 +16,9 @@ const addProduct = () => {
 const displayProduct = (product, quentaty) => {
     const productContatiner = document.getElementById('item-contatiner');
     const p = document.createElement('div');
-    p.style.marginTop ='20px'
-        p.innerText = `${product} : ${quentaty}`;
+    p.style.marginTop = '20px'
+    p.style.fontSize ='25px'
+    p.innerText = `${product} : ${quentaty}`;
     productContatiner.appendChild(p)
 }
 
