@@ -8,7 +8,7 @@ const addProduct = () => {
     productFild.value ='';
     productQutntaty.value='';
 
-    console.log(product,quentaty);
+
     displayProduct(product,quentaty);
     saveProductLocaleStroge(product,quentaty)
 }
